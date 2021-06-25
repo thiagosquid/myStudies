@@ -69,12 +69,6 @@ input{
 #entrar{
 	position: center;
 }
-footer{
-	padding: 20px;
-	margin: auto;
-text-align: center;
-font-size: 0.75em;
-}
 
 input[type="submit"]{
 	width: 100%!important;
@@ -95,3 +89,11 @@ input[type="submit"]{
   input[type="submit"]:hover{
 	background: #4ab3c6;
   }
+
+  footer{
+	padding: 20px;
+	margin: auto;
+text-align: center;
+font-size: 0.75em;
+text-shadow: 0px 0px 7px black;
+}
