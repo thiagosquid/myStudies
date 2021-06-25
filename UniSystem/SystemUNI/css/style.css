@@ -1,5 +1,7 @@
-﻿@charset = "UTF-8";
-
+﻿@charset "UTF-8";
+a.links{
+	display: none;
+}
 body{
 		background-color : #fff;
 		font-family: arial, sans-serif; 
@@ -15,6 +17,7 @@ font-size: 1.8em;
 
 .caixa{
 	margin: auto;
+	background-position: top #436e7a #3ECFFA;
 	background-color: #3ECFFA;
 	border-radius: 15px;
 	width: 400px;
@@ -23,17 +26,29 @@ font-size: 1.8em;
 	box-shadow: 5px 5px 10px 5px #0000002C;
 	
 }
-h3{
-	text-shadow: 1px 1px 1px #fff; 
+#login{
+	text-align: center;
+	text-shadow: 1px 1px 1px #1f657a; 
+}
+#senha{
+	text-align: center;
+	text-shadow: 1px 1px 1px #1f657a; 
+}
+label{
+	text-shadow: 1px 1px 1px #1f657a; 
+}
+input{
+	margin: auto;
 }
 .login{
 	width: auto;
-	height: 100px;
-	padding: 20px;
+	height: 300px;
+	padding: 45px;
 }
 
-
-
+button{
+	position: absolute;
+}
 footer{
 	margin: auto;
 text-align: center;
