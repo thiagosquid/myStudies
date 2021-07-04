@@ -33,7 +33,7 @@ function adc(){
     let res = document.querySelector('div#res')
     res.innerHTML = ``
     
-    if(num.indexOf(entrada) != -1 || entrada < 1){
+    if(num.indexOf(entrada) != -1 || entrada < 1 || entrada > 100){
         alert("Valor inválido ou já existente")
     } else {
         num.push(entrada)
