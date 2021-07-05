@@ -29,7 +29,7 @@ let num = []
 
 function adc(){
     let cont = num.length
-    let entrada = Number(document.getElementById('cxnum').value)
+    let entrada = Number(document.querySelector('input#cxnum').value)
     let res = document.querySelector('div#res')
     res.innerHTML = ``
     
@@ -42,6 +42,8 @@ function adc(){
         cad.text = `Número ${num[cont]} adicionado`
         lista.appendChild(cad)
     }
+    document.querySelector('input#cxnum').value = ``
+    document.querySelector('input#cxnum').focus()
 }
 
 function resumo(){
@@ -56,5 +58,4 @@ function resumo(){
     A média dos valores digitados é ${media(num)}
     `
     }
-
 }
