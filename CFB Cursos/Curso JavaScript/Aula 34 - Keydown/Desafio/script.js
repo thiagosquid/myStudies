@@ -1,26 +1,17 @@
 var px=0;
 var py=0;
-window.addEventListener("click",inicia);
+var obj = document.getElementById('dv1');
+obj.addEventListener("click",inicia);
 
-function inicia(){
-    var obj = document.getElementById('dv1');
-    obj.style.backgroundColor = "#f00"
-    obj.addEventListener("click");
-    
-    if(click == 'ArrowDown'){
-        obj.style.backgroundColor = "#f00"
-        obj.addEventListener("keydown",move);
-    }
+function inicia(){  
+    document.addEventListener("keydown",move);
+    obj.style.backgroundColor = "#f00"   
 }
 
 function move(){
     var obj = document.getElementById('dv1');
-    //obj.style.backgroundColor = "#f00";
     var tecla= event.key;
     
-    //37=Esquerda - 38=cima - 39=direita - 40=baixo
-    
-    //alert(tecla)
     if(tecla == 'ArrowLeft'){
         px-=10;
         obj.style.left = px+"px";
@@ -33,9 +24,11 @@ function move(){
     }else if(tecla == 'ArrowDown'){       
         py+=10;
         obj.style.top = py+"px";
-    }else if(tecla == 'Enter'){       
+    }else if(tecla == 'Enter'){    
         alert('Evento Keydown Removido');
-        document.removeEventListener("keydown",move);
-        obj.style.backgroundColor('#000');
+        document.removeEventListener("keydown", move);
+        console.log('bloco 1');
+        obj.style.backgroundColor= '#fff'; 
+        console.log('bloco 2');   
     }
 }

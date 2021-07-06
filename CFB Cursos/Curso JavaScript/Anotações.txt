@@ -1,0 +1,9 @@
+Aula 35 - setTimeout e setInterval
+
+setTimeout(nomeFunction, tempo em milisegundos) - chama a funçao após o tempo determinado. setTimeout(func, 1000) >>> a função será chamada após 1000 ms.
+
+setInterval(nomeFunction, tempo em milisegundos) - chama a função a cada vez que passa o tempo determinado. setInterval(func, 500) >>> a função será chamada a cada 500ms.
+
+clearInterval(nome variável associada ao intervalo) - Limpar o intervalo.
+
+Math.floor = arredonda o valor para inteiro.
