@@ -7,3 +7,8 @@ setInterval(nomeFunction, tempo em milisegundos) - chama a função a cada vez q
 clearInterval(nome variável associada ao intervalo) - Limpar o intervalo.
 
 Math.floor = arredonda o valor para inteiro.
+
+Aula 38 - Relógio digital
+
+new Date - seta uma variável com todas as informações de data e hora.
+varNome.getHours() - extrai apenas a hora da variável que armazenou os dados de tempo do usuário.
