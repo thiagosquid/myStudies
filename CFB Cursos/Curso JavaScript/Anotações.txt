@@ -17,3 +17,9 @@ varNome.getSeconds() - extrai os segundos
 
 Aula 39 - requestAnimationFrame
 
+Ele chama a animação assim que o navegador estiver pronto para exibir a imagem novamente
+
+Aula 41 - Recursividade
+
+Quando o incremento for passado como parâmetro deve ser feito o pré-incremento.
+
