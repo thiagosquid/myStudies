@@ -12,3 +12,8 @@ Aula 38 - Relógio digital
 
 new Date - seta uma variável com todas as informações de data e hora.
 varNome.getHours() - extrai apenas a hora da variável que armazenou os dados de tempo do usuário.
+varNome.getMinutes() - extrai os minutos
+varNome.getSeconds() - extrai os segundos
+
+Aula 39 - requestAnimationFrame
+
