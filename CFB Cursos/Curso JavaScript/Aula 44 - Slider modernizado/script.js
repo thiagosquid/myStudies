@@ -3,8 +3,12 @@ var slider;
 var imgAtual;
 var maxImg;
 var tmp;
+var tempoTroca = 0;
+var vtempo;
+var vbarra;
 
 window.addEventListener('load',inicia);
+//document.addEventListener("keydown", troca)
 
 function preCarregamento(){
     var s = 1;
@@ -25,27 +29,33 @@ function inicia(){
     imgAtual = Math.floor(Math.random()*5);
     maxImg = imgs.length -1;
     slider = document.getElementById('dvslider');
+    vbarra = document.getElementById('dvbarra');
     carregarImg(imgAtual);
-    //tmp = setInterval(troca, 2000);
+    tempoTroca = 0;
+    anima();
+    
 }
 
-document.addEventListener("keydown", troca)
-function troca(){
-    var key = event.key;
-    if(key == "ArrowRight"){
-        imgAtual++;
+function troca(dir){
+    tempoTroca = 0;
+    imgAtual += dir;
+ 
         if(imgAtual > maxImg){
             imgAtual = 0;
-        }
-    }else if (key == "ArrowLeft"){
-        imgAtual--;
-        if(imgAtual < 0){
+        }else if(imgAtual < 0){
             imgAtual = maxImg;
         }
-    }
-    // imgAtual++;
-    //     if(imgAtual > maxImg){
-    //         imgAtual = 0;
-    //     }
     carregarImg(imgAtual);
+}
+
+function anima(){
+    tempoTroca++;
+    if(tempoTroca >= 500){
+        tempoTroca = 0;
+        troca(1);
+    }
+    vtempo = tempoTroca/5;
+    vbarra.style.width = vtempo+"%";
+
+    window.requestAnimationFrame(anima);
 }

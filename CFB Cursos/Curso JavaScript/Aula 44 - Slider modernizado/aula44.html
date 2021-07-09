@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider em Javascript</title>
+    <style>
+        #dvslider{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #000;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.651);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btSlider{
+            background-color: rgba(0, 0, 0, 0.274);
+            height: 30%;
+            border-radius: 2px;
+            color: white;
+            cursor: pointer; /* Aparece a mãozinha */
+            outline: none;
+            border: none;
+            margin: 10px;
+        }
+        #dvload{
+            width: 100%;
+            height: 5px;
+            margin-top: 25%;
+            border: 1px solid rgba(0, 0, 0, 0.274)
+        }
+        #dvbarra{
+            width: 0%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="dvslider">
+        <button class="btSlider" onclick="troca(-1)"><</button>
+        <div id="dvload">
+            <div id="dvbarra"></div>
+
+        </div>
+        <button class="btSlider" onclick="troca(1)">></button>
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
