@@ -23,3 +23,67 @@ Aula 41 - Recursividade
 
 Quando o incremento for passado como parâmetro deve ser feito o pré-incremento.
 
+Aula 46 - Uso do Match
+
+RETORNA ARRAY
+
+texto.match("termo para busca") - retorna apenas o primeiro e é case sensitive. Caso não encontre retorna null.
+
+texto.match(/termo para busca/g) - retorna quantidade total do termo buscado.  
+
+texto.match(/termo para busca/ig) - retorna quantidade total do termo buscado e busca ignorando o case sensitive.  
+
+texto.match(/[termos para busca]/ig) - retorna a quantidade para todos os termos buscados, na ordem de aparição.
+
+texto.match(/[^termos para busca]/ig) - retorna a quantidade para todos os termos execeto os buscados.. ^ indica que quer ignorar aqueles termos passados
+
+texto.match(/[letra1-letra3]/ig) - retorna todos os termos entre esse... 1, 2 e 3. e pode usar a ^ para não retornar o que estiver dentro dessa faixa, apenas fora
+
+Aula 47 - Uso do search, replace, charAt, charCodeAt, fromCharCode, concat.
+
+NÃO RETORNA ARRAY;
+E SÓ RETORNA A POSIÇÃO DO PRIMEIRO ELEMENTO, INDEPENDENTE DA QUANTIDADE;
+ELE BUSCA PARTE DA PALAVRA.
+
+texto.search(/termo busca/i) - para ignorar o case sensitive. Retorna a posição onde inicia o termo buscado.
+
+texto.replace(/termo busca/i, "termo para substituir") - substitui o termo buscado pelo termo desejado. Com 'i' substitui apenas o primeiro termo. Usando tbm o 'g' substitui todos os termos encontrados texto.replace(/termo busca/ig, "termo para substituir")
+
+texto.charAt(nº da posição do termo que deseja) - retorna a letra na posição indicada. 
+
+texto.charCodeAt(nº da posição do termo que deseja) - retorna o código da letra na posição indicada. 
+
+String.fromCharCode(código do caractere) - retorna o caracter referente ao código indicado... Precisa colocar a classe antes do método, no exemplo da aula foi String.
+
+texto.concat(txt2) - concatena o conteúdo da variável 'texto' com o conteúdo da variável 'txt2', ou uma string diretamente, não necessariamente uma variável que contém uma string.
+
+Aula 48 - Uso do indexOf, lastIndexOf, localeCompare, slice, split, substr
+
+texto.indexOf('caracter desejado') - retorna a posição do primeiro caracter encontrado. É case sensitive, quando não encontra o caracter retorna -1.
+
+texto.lastIndexOf('caracter') - retorna a posição do ultimo caracter encontrado. É case sensitive, quando não encontra o caracter retorna -1.;
+
+texto1.localeCompare(texto2) - compara as duas strings, se forem iguais retorna 0, se não retorna -1.
+
+texto.slice(index1,index2) - retorna a string entre as posições indicadas.
+
+texto.split("caracter") - divide a string onde encontrar o caracter especificado... Tornando cada parte dessa divisão em um elemento de um array, podendo ser acessado por seus índices.
+
+texto.substr(index1, quantos caracteres após o índice) - Retorna o termo referente à quantidade após o índice indicado.
+
+texto.toLowerCase() - converte tudo para minúsculo.
+
+texto.toUpperCase() - converte tudo para maiúsculo.
+
+
+Aula 49 - toString(), trim
+
+num.toString() - converte para string.
+num.toString(2) - converte para binário;
+num.toString(8) - converte para octal;
+num.toString(16) - converte para hexadecimal;
+
+texto.trim() - remove espaços antes e depois da string
+
+\"Curso\" - usando a barra antes do elemento " indica que eu quero imprimir ele no documento. Serve para ", ', \(usando duas)
+\n quebra linha. Não funciona no HTML, mas funciona no alert. 
