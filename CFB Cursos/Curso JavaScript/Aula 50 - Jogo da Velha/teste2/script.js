@@ -16,23 +16,22 @@ let botoes = document.body.querySelectorAll(".word");
 
 for(let x=0; x<botoes.length; x++){
    botoes[x].addEventListener("click", function(){
-       letra = this.value;
-    console.log(`A letra clicada é >>> ${letra}`);
+    letra = this.value;
     verificaLetra(letra);
    });
 }
 
 function recebePalavra(){
-    //spaces = '';
+    let impr = '';
     palavraSel = Math.floor(Math.random()*lista.length);
     tamPal = lista[palavraSel].length;
     palavraOculta = lista[palavraSel];
     console.log(`A palavra selecionada é ${palavraOculta}`);
-    console.log(tamPal);
     for(var i = 0; i < tamPal; i++){
-        spaces += '_';
+        spaces[i] = '_';
+        impr += spaces[i];
     }
-    imprimeTexto(spaces)
+    imprimeTexto(impr)
 }
 
 
@@ -43,20 +42,19 @@ function imprimeTexto(pal){
 
 function verificaLetra(l){
     let cont = 0;
-    var imp = '';
-    console.log(lista[palavraSel].indexOf(l));
-    let pos = lista[palavraSel].indexOf(l);
-        if(pos > -1){
-            for(cont = pos; cont < tamPal; cont++){
-                if(l == palavraOculta[cont]){
-                    spaces[cont] = l;
-                    console.log(`chegou aqui - ${l}`);
-                }
+    var imp = '';    
+        for(cont = 0; cont < tamPal; cont++){
+            if(l == palavraOculta[cont]){
+                spaces[cont] = l;
             }
         }
-        for(cont = 0; cont < tamPal; cont++){
-            
-            imp += spaces[cont];
-        }
-    console.log(imp);
+    alteraImpressao();
+}
+
+function alteraImpressao(){
+    impr = '';
+    for(var i = 0; i < tamPal; i++){
+        impr += spaces[i];
+    }
+    imprimeTexto(impr)
 }
