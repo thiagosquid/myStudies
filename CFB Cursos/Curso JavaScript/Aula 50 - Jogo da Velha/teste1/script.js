@@ -5,7 +5,7 @@ iniciar.addEventListener('click',inicia);
 var tamPalavra;
 var espaços;
 var mostra = document.getElementById('palavraIncompleta')
-var chances;
+var chances = 5;
 var letra;
 var acerto = 0;
 
@@ -16,7 +16,7 @@ function inicia(){
     palavraSel = palavras[sorteio];
     tamPalavra = palavraSel.length;
     espaços = [];
-    chances = 5;
+    // chances = 5;
     exibirPalavra(tamPalavra);
     console.log(`A palavra é ${palavraSel}`)
 }
@@ -38,30 +38,33 @@ function pegaLetra(){
             letra = this.value;  
             if(chances > 0){
                 verificaLetra();
-                }
+            }
         });
     } 
 }
 
 
 function verificaLetra(){
-    
+    acerto = 0;
     for(var i = 0; i < tamPalavra; i++){
             if(letra == palavraSel[i]){
                 espaços[i] = letra;
                 acerto = 1;                    
             }
+            console.log('Entrou no for')
     }
         if(acerto == 0){
-            chances -= 1;
-        }else if(acerto ==1){
+            --chances;
+            console.log(`imprimiu as chances: ${chances}`);
+            pegaLetra();
+        }else if(acerto == 1 && chances > 0){
             var impr = '';
             for(var i = 0; i < tamPalavra; i++){
                 impr += espaços[i];
             }
             mostra.innerHTML = impr;
-            console.log(chances);
-            pegaLetra();
+            console.log(`imprimiu as chances: ${chances}`);
+            
         }else{
             alert('acabou');
         }
