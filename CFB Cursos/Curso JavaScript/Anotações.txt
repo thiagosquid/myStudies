@@ -87,3 +87,15 @@ texto.trim() - remove espaços antes e depois da string
 
 \"Curso\" - usando a barra antes do elemento " indica que eu quero imprimir ele no documento. Serve para ", ', \(usando duas)
 \n quebra linha. Não funciona no HTML, mas funciona no alert. 
+
+
+
+Aula 62 - Objeto Window - Open e Close
+
+nomeVariavelDaJanela = window.open("endereço", "local")
+    local >> _blank, _self, [nome do iframe]
+window.open("endereço", "local", "width=**px , height=**px, top=**, left=**")
+
+nomeVariavelDaJanela.window.close() >> fecha a janela armazenada na variável.
+
+Aula 62 - Objeto Window - inner/outerWeigth, inner/outerHeight, screenX, screenY

@@ -19,7 +19,7 @@ for(let x=0; x<botoes.length; x++){
    botoes[x].addEventListener("click", function(){
     letra = this.value;
         if(letrasEscolhidas.indexOf(letra) == -1){
-            if(chances > 0){
+            if(chances >= 0){
             verificaLetra(letra);
             }else{
                 alert('Você perdeu');
@@ -32,6 +32,7 @@ for(let x=0; x<botoes.length; x++){
 }
     //Inicialização do jogo
 function recebePalavra(){
+    letrasEscolhidas = [];
     let impr = '';
     chances = 5;
     palavraSel = Math.floor(Math.random()*lista.length);
@@ -48,6 +49,9 @@ function recebePalavra(){
 function imprimeTexto(pal){
     var upper = pal.toUpperCase();
     letreiro.innerHTML = upper;
+    if(palavraOculta == impr){
+        alert('Você Ganhou!!!')
+    }
 }
 
 function verificaLetra(l){

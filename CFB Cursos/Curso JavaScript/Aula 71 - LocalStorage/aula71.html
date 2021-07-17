@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 71 - Localstorage</title>
+    <style>
+        #fconf{
+            position: absolute;
+            top: 130px;
+            left: 0px;
+            border: 1px solid black;
+            background-color: #888;
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Localstorage - Curso de Javascript</h1>
+    <p id="painel"></p>
+    <button onclick="mostraConf()">Configurações</button>
+
+    <form name="fconf" id="fconf">
+        <label for="">Nome:</label><br>
+        <input type="text" name="fnome" id="fnome" size="20"></input><br>
+        <label for="">Cor de fundo:</label><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#000')">Preto</input><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#fff')">Branco</input><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#f00')">Vermelho</input><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#0f0')">Verde</input><br>
+        <input type="radio" name="fcorF" onclick="defineCor(1,'#00f')">Azul</input><br>
+        <label for="">Cor texto:</label><br>
+        <input type="radio" name="fcorF" onclick="defineCor(2,'#000')">Preto</input><br>
+        <input type="radio" name="fcorF" onclick="defineCor(2,'#fff')">Branco</input><br>
+        <input type="button" value="Gravar" onclick="gravar()">
+
+
+
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
